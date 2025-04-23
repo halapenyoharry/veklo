@@ -1,6 +1,6 @@
 # Veklo - Dynamic Head Tracking Audio Balance System
 
-Veklo is a camera-based head tracking system that automatically adjusts your audio balance based on your head position. As you move left or right, the audio balance follows you, creating a "sweet spot" that moves with you.
+Veklo is a camera-based head tracking system that automatically adjusts your Mac's audio balance based on your head position. As you move left or right, the audio balance follows you, creating a "sweet spot" that moves with you.
 
 ## Features
 
@@ -10,10 +10,6 @@ Veklo is a camera-based head tracking system that automatically adjusts your aud
 - **Sensitivity control**: Adjust how quickly balance changes with movement
 - **Simple terminal control**: Easy-to-use keyboard commands
 - **eqMac compatibility**: Works with system audio or eqMac
-
-## Demo
-
-![Veklo Demo](veklo_demo.gif)
 
 ## Installation
 
@@ -27,7 +23,7 @@ Veklo is a camera-based head tracking system that automatically adjusts your aud
 
 1. Clone this repository:
 ```bash
-git clone https://github.com/yourusername/veklo.git
+git clone https://github.com/halapenyoharry/veklo.git
 cd veklo
 ```
 
@@ -42,7 +38,7 @@ pip3 install opencv-python numpy pyobjc
 
 ## Usage
 
-Run the main application:
+Run the application from the terminal:
 
 ```bash
 python3 head_track_audio.py
@@ -50,7 +46,7 @@ python3 head_track_audio.py
 
 ### Commands
 
-When the application is running, you can use the following commands:
+When the application is running, use these terminal commands:
 
 - Type `c` and press Enter to calibrate (set the current position as your sweet spot)
 - Type `s` and press Enter to adjust sensitivity
@@ -58,7 +54,7 @@ When the application is running, you can use the following commands:
 - Type `f` and press Enter to toggle cartoon filter
 - Type `q` and press Enter to quit
 
-You can also press the corresponding keys in the video window if it's visible.
+If the video window is visible, you can also press the corresponding keys in that window.
 
 ## How It Works
 
@@ -70,17 +66,23 @@ Veklo uses:
 
 The system continuously tracks your face position and converts it to an audio balance value. The balance is inverted so that audio is stronger on the side you're sitting on, creating a more natural listening experience.
 
-## Customization
+## Tips for Best Results
 
-You can modify the code to:
-- Change the sensitivity of balance adjustment
-- Customize the cartoon filter effects
-- Add additional audio balance modes
-- Create a custom UI
+1. **Calibration**: Type 'c' while sitting in your preferred position to set your "sweet spot"
+2. **Adjust Sensitivity**: If balance changes too quickly or slowly as you move, use 's' to adjust
+3. **Lighting**: Ensure your face is well-lit for best tracking performance
+4. **Camera Position**: Position your camera so your face is clearly visible when seated normally
+5. **Audio Setup**: Works best with stereo speakers positioned on either side of your display
+
+## Troubleshooting
+
+- **No Video Preview**: If the video window doesn't appear, the app still works - just use terminal commands
+- **Camera Access**: If camera doesn't activate, check your privacy settings
+- **Audio Balance Issues**: Ensure Terminal has Accessibility permissions in System Preferences
 
 ## Future Enhancements
 
-- Proper menubar application (in development)
+- Menubar app integration
 - Additional video filters
 - Support for external audio interfaces
 - Dark mode/light mode themes
